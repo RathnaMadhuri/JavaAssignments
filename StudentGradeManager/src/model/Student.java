@@ -1,21 +1,28 @@
 package model;
 
+import java.util.List;
+
 public class Student {
-    public Student(int id, String name, int grade) {
+
+    // Class attributes
+    private Integer id;
+    private String name;
+    private List<Double> grades;
+
+    // Contructors
+    public Student() {}
+    public Student(Integer id, String name, List<Double> grade) {
         this.id = id;
         this.name = name;
-        this.grade = grade;
+        this.grades = grade;
     }
 
-    private int id;
-    private String name;
-    private int grade;
-
-    public int getId() {
+    // Getters and Setters
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -27,12 +34,12 @@ public class Student {
         this.name = name;
     }
 
-    public int getGrade() {
-        return grade;
+    public List<Double> getGrades() {
+        return grades;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public void setGrades(List<Double> grades) {
+        this.grades = grades;
     }
 
     @Override
@@ -40,7 +47,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", grade=" + grade +
+                ", grades=" + grades +
                 '}';
     }
 }
