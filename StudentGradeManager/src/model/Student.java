@@ -6,6 +6,10 @@ public class Student {
         this.name = name;
         this.grade = grade;
     }
+   public Student(String name,  int grade) {
+        this.name = name;
+        this.grade = grade;
+    }
 
     private int id;
     private String name;
